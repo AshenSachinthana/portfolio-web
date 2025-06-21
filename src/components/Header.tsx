@@ -74,7 +74,7 @@ const Header: React.FC = () => {
               </motion.button>
             ))}
             
-            {/* <motion.button
+            <motion.button
               onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors duration-200"
               whileHover={{ scale: 1.1 }}
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
               ) : (
                 <Moon className="h-5 w-5 text-gray-700" />
               )}
-            </motion.button> */}
+            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
