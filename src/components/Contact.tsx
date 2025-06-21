@@ -28,8 +28,8 @@ const Contact: React.FC = () => {
     try {
       // Replace these with your actual EmailJS configuration
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_id5e57o', // Replace with your EmailJS service ID
+        'template_xc9muvq', // Replace with your EmailJS template ID
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
           message: formData.message,
           to_email: 'dasachinthana@gmail.com'
         },
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        'PHF4dcaKibVLr0zaH' // Replace with your EmailJS public key
       );
 
       setSubmitStatus('success');
@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/AshenSachinthana',
+      href: 'www.linkedin.com/in/ashen-sachinthana',
       color: 'hover:text-blue-600 dark:hover:text-blue-400'
     }
   ];
