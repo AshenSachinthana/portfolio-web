@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin, Award, Trophy } from 'lucide-react';
 
 const Education: React.FC = () => {
   const education = [
@@ -28,9 +28,9 @@ const Education: React.FC = () => {
       icon: Award
     },
     {
-      title: 'Dean\'s List Academic Excellence',
+      title: 'Hackathon Winner - Best Innovation',
       year: '2023',
-      icon: GraduationCap
+      icon: Trophy
     },
     {
       title: 'Programming Competition Participant',
