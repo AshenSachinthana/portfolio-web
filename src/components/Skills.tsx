@@ -48,7 +48,7 @@ const Skills: React.FC = () => {
         { name: 'PostgreSQL', level: 80 },
         { name: 'MongoDB', level: 75 },
         { name: 'MySQL', level: 85 },
-        { name: 'Redis', level: 70 },
+        { name: 'DynamoDB', level: 60 },
         { name: 'Database Design', level: 80 }
       ]
     }
