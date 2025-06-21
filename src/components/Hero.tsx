@@ -119,14 +119,17 @@ const Hero: React.FC = () => {
                 Get In Touch
               </motion.button>
               
-              <motion.button
+              <motion.a
+                href="https://drive.google.com/file/d/1fzxaxfnBTmfTBMSTjo2a1yEj_wiypv_8/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-slate-900 transition-all duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download CV
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Social Links */}
@@ -147,7 +150,7 @@ const Hero: React.FC = () => {
                 <Github className="w-6 h-6" />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/AshenSachinthana"
+                href="www.linkedin.com/in/ashen-sachinthana"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors duration-200"
