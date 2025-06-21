@@ -28,9 +28,15 @@ const Header: React.FC = () => {
   ];
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
+    const element = document.querySelector(href) as HTMLElement;
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = 80; // Adjust based on your header height
+      const elementPosition = element.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
       setIsMenuOpen(false);
     }
   };
@@ -38,8 +44,8 @@ const Header: React.FC = () => {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-lg'
+        isScrolled || isMenuOpen
+          ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -66,7 +72,11 @@ const Header: React.FC = () => {
               <motion.button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                className={`transition-colors duration-200 ${
+                  isScrolled || isMenuOpen
+                    ? 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                    : 'text-white hover:text-blue-300'
+                }`}
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
               >
@@ -76,14 +86,18 @@ const Header: React.FC = () => {
             
             <motion.button
               onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors duration-200"
+              className={`p-2 rounded-full transition-colors duration-200 ${
+                isScrolled || isMenuOpen
+                  ? 'hover:bg-gray-100 dark:hover:bg-slate-800'
+                  : 'hover:bg-white/10'
+              }`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               {isDark ? (
                 <Sun className="h-5 w-5 text-yellow-500" />
               ) : (
-                <Moon className="h-5 w-5 text-gray-700" />
+                <Moon className={`h-5 w-5 ${isScrolled || isMenuOpen ? 'text-gray-700' : 'text-white'}`} />
               )}
             </motion.button>
           </div>
@@ -92,20 +106,28 @@ const Header: React.FC = () => {
           <div className="md:hidden flex items-center space-x-2">
             <motion.button
               onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors duration-200"
+              className={`p-2 rounded-full transition-colors duration-200 ${
+                isScrolled || isMenuOpen
+                  ? 'hover:bg-gray-100 dark:hover:bg-slate-800'
+                  : 'hover:bg-white/10'
+              }`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               {isDark ? (
                 <Sun className="h-5 w-5 text-yellow-500" />
               ) : (
-                <Moon className="h-5 w-5 text-gray-700" />
+                <Moon className={`h-5 w-5 ${isScrolled || isMenuOpen ? 'text-gray-700 dark:text-gray-300' : 'text-white'}`} />
               )}
             </motion.button>
             
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors duration-200"
+              className={`p-2 rounded-md transition-colors duration-200 ${
+                isScrolled || isMenuOpen
+                  ? 'hover:bg-gray-100 dark:hover:bg-slate-800 text-gray-700 dark:text-gray-300'
+                  : 'hover:bg-white/10 text-white'
+              }`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -119,29 +141,32 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
-        } overflow-hidden`}>
-          <div className="py-4 space-y-3 border-t border-gray-200 dark:border-slate-700">
-            {navItems.map((item, index) => (
-              <motion.button
-                key={item.href}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-lg transition-all duration-200"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ 
-                  opacity: isMenuOpen ? 1 : 0, 
-                  x: isMenuOpen ? 0 : -20 
-                }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ x: 5 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                {item.label}
-              </motion.button>
-            ))}
-          </div>
-        </div>
+        {isMenuOpen && (
+          <motion.div
+            className="md:hidden border-t border-gray-200 dark:border-slate-700"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+          >
+            <div className="py-4 space-y-1">
+              {navItems.map((item, index) => (
+                <motion.button
+                  key={item.href}
+                  onClick={() => scrollToSection(item.href)}
+                  className="block w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-lg transition-all duration-200"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05, duration: 0.2 }}
+                  whileHover={{ x: 5 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {item.label}
+                </motion.button>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </nav>
     </motion.header>
   );
