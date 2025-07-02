@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
               </motion.button>
               
               <motion.a
-                href="https://drive.google.com/file/d/1fzxaxfnBTmfTBMSTjo2a1yEj_wiypv_8/view?usp=sharing"
+                href="https://drive.google.com/file/d/1EOcnfVVpwDfmWhHOsHSdxtjPU0NlwIT7/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-slate-900 transition-all duration-200"
