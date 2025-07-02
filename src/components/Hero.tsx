@@ -76,9 +76,8 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Passionate about cloud computing, automation, and building scalable systems. 
-              Currently pursuing Computer Science at University of Colombo and working as an intern 
-              at Panaceata, where I'm gaining hands-on experience with AWS and CI/CD pipelines.
+              Dedicated aspiring DevOps engineer with hands-on experience from my Software Engineering internship at Panaceata, specializing in CI/CD pipelines and AWS cloud services. 
+              Having completed my Computer Science degree at University of Colombo (awaiting graduation) while building expertise in automation, scalable infrastructure, and cloud technologies.
             </motion.p>
 
             {/* Contact Info */}
