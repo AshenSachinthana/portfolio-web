@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Mail, Github, Linkedin, MapPin, Phone } from 'lucide-react';
+import { Download, Mail, Github, Linkedin, MapPin, Phone,Gitlab } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -158,6 +158,16 @@ const Hero: React.FC = () => {
                 whileTap={{ scale: 0.9 }}
               >
                 <Linkedin className="w-6 h-6" />
+              </motion.a>
+              <motion.a
+                href="https://gitlab.com/AshenSachinthana"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors duration-200"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Gitlab className="w-6 h-6" />
               </motion.a>
             </motion.div>
           </motion.div>
