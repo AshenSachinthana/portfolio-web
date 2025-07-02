@@ -110,10 +110,32 @@ const Projects: React.FC = () => {
         'User reviews and ratings',
         'Admin dashboard for management'
       ]
+    },
+    {
+      id: 6,
+      title: 'Weather Application',
+      description: 'A Node.js weather application with dual CI/CD pipeline implementation and AWS cloud deployment.',
+      longDescription: 'A comprehensive weather application that showcases modern DevOps practices through dual CI/CD pipeline implementation. Built with Node.js and integrated with weather APIs, this project demonstrates proficiency in cloud deployment, automation, and continuous integration workflows. The application fetches real-time weather data based on user location input and is deployed across multiple platforms for learning and comparison purposes.',
+      technologies: ['Node.js', 'Weather API', 'AWS Elastic Beanstalk', 'GitLab CI/CD', 'GitHub Actions', 'SSL/HTTPS'],
+      year: '2025',
+      category: 'DevOps',
+      image: '/assets/images/projects/WeatherApp.png',
+      githubUrl: 'https://github.com/AshenSachinthana/weather-app',
+      gitlabUrl: 'https://gitlab.com/AshenSachinthana/weather-app',
+      liveUrl: '',
+      featured: true,
+      features: [
+        'Real-time weather data retrieval based on user location input',
+        'Dual CI/CD pipeline implementation using both GitLab CI/CD and GitHub Actions',
+        'Automated deployment to AWS Elastic Beanstalk with environment management',
+        'SSL certificate configuration for secure HTTPS communication',
+        'Cross-platform deployment comparison and learning experience',
+        'Infrastructure as Code practices and automated testing integration'
+      ]
     }
   ];
 
-  const categories = ['All', 'Full Stack', 'Web App', 'Mobile App', 'E-commerce'];
+  const categories = ['All', 'Full Stack', 'Web App', 'Mobile App', 'E-commerce', 'DevOps'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProjects = selectedCategory === 'All' 
