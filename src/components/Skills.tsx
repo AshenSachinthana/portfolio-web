@@ -185,8 +185,8 @@ const Skills: React.FC = () => {
             className="flex flex-wrap justify-center gap-4"
           >
             {[
-              'Kubernetes', 'Terraform', 'Ansible', 'Prometheus', 'Grafana',
-              'Elasticsearch', 'RabbitMQ', 'Squid Proxy', 'Keepalived', 'DHCP',
+              'Kubernetes', 'Terraform', 'Ansible', 'Jenkins', 'Docker',
+              'Bash Scripting', 'RabbitMQ', 'Squid Proxy', 'Keepalived', 'DHCP',
               'System Hardening', 'Network Security', 'Backup Solutions'
             ].map((tech) => (
               <motion.span
