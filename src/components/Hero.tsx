@@ -5,7 +5,7 @@ import { Download, Mail, Github, Linkedin, MapPin, Phone,Gitlab } from 'lucide-r
 const Hero: React.FC = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const roles = [
-    'Computer Science Student',
+    'Computer Science Graduate',
     'DevOps Enthusiast',
     'Cloud Computing Specialist',
     'Full Stack Developer',
@@ -76,8 +76,8 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Dedicated aspiring DevOps engineer with hands-on experience from my Software Engineering internship at Panaceata, specializing in CI/CD pipelines and AWS cloud services. 
-              Having completed my Computer Science degree at University of Colombo (awaiting graduation) while building expertise in automation, scalable infrastructure, and cloud technologies.
+              Dedicated aspiring DevOps engineer and Full Stack Developer with hands on experience from my Software Engineering internship at Panaceata, specializing in CI/CD pipelines and AWS cloud services. 
+              Recent Computer Science graduate from the University of Colombo School of Computing with expertise in automation, scalable infrastructure, and cloud technologies.
             </motion.p>
 
             {/* Contact Info */}
