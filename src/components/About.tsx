@@ -55,7 +55,7 @@ const About: React.FC = () => {
               variants={itemVariants}
               className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
             >
-              I'm a dedicated Computer Science student at the University of Colombo School of Computing, 
+              I'm a dedicated Computer Science graduate at the University of Colombo School of Computing, 
               with a strong passion for DevOps, cloud computing, and system automation. My journey in 
               technology has been driven by curiosity and a desire to build efficient, scalable solutions.
             </motion.p>
