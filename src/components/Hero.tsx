@@ -76,8 +76,8 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Dedicated aspiring DevOps engineer and Full Stack Developer with hands on experience from my Software Engineering internship at Panaceata, specializing in CI/CD pipelines and AWS cloud services. 
-              Recent Computer Science graduate from the University of Colombo School of Computing with expertise in automation, scalable infrastructure, and cloud technologies.
+              Full Stack Developer with expertise in building scalable SaaS applications, multi-tenant architectures, and enterprise-grade observability solutions. I specialize in cloud infrastructure, CI/CD optimization, and modern DevOps practices using AWS and containerization technologies.
+              Computer Science graduate from the University of Colombo School of Computing with hands-on experience in feature flag systems, distributed logging & monitoring, and cloud-native development.
             </motion.p>
 
             {/* Contact Info */}

@@ -64,10 +64,10 @@ const About: React.FC = () => {
               variants={itemVariants}
               className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
             >
-              Currently working as an intern at Panaceata, I've gained valuable hands-on experience 
-              with AWS services, particularly S3, and have been actively involved in improving CI/CD 
-              processes. This experience has strengthened my understanding of cloud infrastructure 
-              and modern deployment practices.
+              Currently working as a Full Stack Developer at Panaceata, I design and implement scalable
+              SaaS applications with multi-tenant architectures, feature flag systems, and comprehensive
+              logging & monitoring solutions. My expertise spans across AWS cloud services, containerization,
+              CI/CD optimization, and building enterprise-grade observability platforms.
             </motion.p>
             
             <motion.p
@@ -118,8 +118,8 @@ const About: React.FC = () => {
                 <h3 className="text-xl font-semibold ml-4">Experience</h3>
               </div>
               <p className="text-gray-600 dark:text-gray-400">
-                Intern at Panaceata, working with AWS services and CI/CD pipelines, 
-                gaining practical experience in cloud computing and DevOps practices.
+                Full Stack Developer at Panaceata, specializing in multi-tenant SaaS architecture,
+                feature flag systems, logging & monitoring platforms, and cloud infrastructure optimization.
               </p>
             </motion.div>
 
