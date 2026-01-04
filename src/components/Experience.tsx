@@ -5,20 +5,39 @@ import { Briefcase, Calendar, MapPin, CheckCircle } from 'lucide-react';
 const Experience: React.FC = () => {
   const experiences = [
     {
-      title: 'Software Engineering Intern',
+      title: 'Full Stack Developer Intern',
       company: 'Panaceata',
       location: 'Colombo, Sri Lanka',
-      period: '2024 - Present',
+      period: 'November 2024 - May 2025',
       type: 'Internship',
       description: 'Working on cloud infrastructure and DevOps practices, focusing on AWS services and CI/CD pipeline optimization.',
       achievements: [
         'Implemented AWS S3 bucket management and automation scripts',
-        'Optimized CI/CD pipelines reducing deployment time by 40%',
+        'Established quality assurance framework by implementing Playwright end to end testing',
+        'Implemented AWS Lambda functions for notification system',
         'Collaborated with senior developers on infrastructure improvements',
         'Gained hands-on experience with Docker containerization',
         'Contributed to system monitoring and logging implementations'
       ],
-      technologies: ['AWS S3', 'CI/CD', 'Docker', 'Python', 'Jenkins', 'Linux']
+      technologies: ['AWS', 'CI/CD', 'Docker', 'Python', 'Jenkins', 'Playwright']
+    },
+    {
+      title: 'Full Stack Developer',
+      company: 'Panaceata',
+      location: 'Colombo, Sri Lanka',
+      period: 'May 2025 - Present',
+      type: 'Full-time',
+      description: 'Leading full stack development initiatives with emphasis on multi-tenant deployments, feature flag management systems, and enterprise-grade logging and monitoring solutions. Architecting scalable SaaS applications and mentoring junior developers.',
+      achievements: [
+        'Designed and deployed multi tenant SaaS architecture supporting multiple isolated customer environments with secure data segregation',
+        'Built and maintained feature flag system, canary deployments, and progressive feature rollouts',
+        'Implemented end-to-end observability platform integrating logging, monitoring, and alerting using CloudWatch',
+        'Led optimization of deployment pipelines and infrastructure cost reduction by 35%',
+        'Developed scalable APIs and responsive UI components for mission critical applications',
+        'Established database performance monitoring and query optimization strategies for high scale multi tenant systems',
+        'Mentored intern team members and contributed to technical documentation and best practices'
+      ],
+      technologies: ['AWS', 'Docker', 'Kubernetes', 'Node.js', 'React', 'TypeScript', 'PostgreSQL', 'CloudWatch', 'Grafana', 'CI/CD', 'Linux', 'Python']
     }
   ];
 
@@ -63,8 +82,7 @@ const Experience: React.FC = () => {
 
         <motion.div
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          animate="visible"
           variants={containerVariants}
           className="max-w-4xl mx-auto"
         >
